@@ -32,6 +32,7 @@ function create ()
 
     ball.setCollideWorldBounds(true); //5
     ball.setBounce(0.7); //6
+    ball.setInteractive().on('pointerdown', hideBall);
 
     this.physics.add.collider(ball, ground); //7
 
@@ -63,4 +64,8 @@ function update ()
     {
         ball.setVelocityX(0);
     }
+}
+
+function hideBall() {
+    ball.alpha = 0.1;
 }
