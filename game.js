@@ -67,5 +67,9 @@ function update ()
 }
 
 function hideBall() {
-    ball.alpha = 0.1;
+    if (ball.alpha > 0.5) {
+        ball.alpha = 0.1;
+    } else {
+        ball.alpha = 1.0;
+    }
 }
